@@ -11,6 +11,9 @@ Things you may want to cover:
 
 * Configuration
 
+* Local DB configuration troubleshooting
+  pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+
 * Database creation
 
 * Database initialization
