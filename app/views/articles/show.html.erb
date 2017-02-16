@@ -16,7 +16,7 @@
 <nav>
   <ul>
     <li><%= link_to 'Home', root_path %></li>
-    <li><%= link_to 'Blog', articles_path%></li>
+    <li><%= link_to 'Blog Articles', articles_path%></li>
     <li><%= link_to 'About', about_path %></li>
   </ul>
 </nav>
@@ -33,6 +33,7 @@
   <% end %>
   <p><%= @article.title %></p>
   <p><%= @article.description %></p>
+  <%= button_to "Edit this Article", edit_article_path(@article) %>
 </article>
 
 <footer>Copyright &copy; W3Schools.com</footer>
