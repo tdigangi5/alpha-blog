@@ -13,20 +13,13 @@
  *= require_tree .
  *= require_self
 */
-div.container {
+/*div.container {
     width: 100%;
-    border: 1px solid gray;
 }
 
-header, footer {
-    padding: 1em;
-    color: white;
-    background-color: black;
-    clear: left;
-    text-align: center;
-}
 
-nav {
+
+/*nav {
     float: left;
     max-width: 160px;
     margin: 0;
@@ -47,4 +40,4 @@ article {
     border-left: 1px solid gray;
     padding: 1em;
     overflow: hidden;
-}
+}*/

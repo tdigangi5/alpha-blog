@@ -1,17 +1,3 @@
-<div class="container">
-
-<header>
-   <h1>City Gallery</h1>
-</header>
-
-<nav>
-  <ul>
-    <li><%= link_to 'Home', root_path %></li>
-    <li><%= link_to 'Blog Articles', articles_path%></li>
-    <li><%= link_to 'About', about_path %></li>
-  </ul>
-</nav>
-
 <article>
   <h1>Blog</h1>
   <% if @article.errors.any? %>
@@ -26,7 +12,3 @@
   <p><%= @article.description %></p>
   <%= button_to "Edit this Article", edit_article_path(@article) %>
 </article>
-
-<footer>Copyright &copy; W3Schools.com</footer>
-
-</div>
