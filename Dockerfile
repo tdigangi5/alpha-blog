@@ -29,6 +29,8 @@ RUN bundle install
 # Copy the Rails application into place
 COPY . .
 
+#RUN rake assets:precompile
+
 # Define the script we want run once the container boots
 # Use the "exec" form of CMD so our script shuts down gracefully on SIGTERM (i.e. `docker stop`)
-CMD [ "config/containers/app_cmd.sh" ]
+CMD [ "config/app_cmd.sh" ]

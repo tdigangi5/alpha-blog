@@ -3,8 +3,8 @@ services:
 # service configuration for our dockerized Rails app
   db:
     image: postgres:9.4.5
-    # volumes:
-    #   - /tmp:/var/lib/postgresql/data
+    volumes:
+      - "/tmp/alpha_blog:/var/lib/postgresql/data"
   app:
     build: .
     env_file: .env
@@ -12,13 +12,13 @@ services:
       RAILS_ENV: $RAILS_ENV
     depends_on:
       - db
-    expose:
-      - "3000"
-  web:
-    build:
-      context: config/containers
-      dockerfile: Dockerfile-nginx
-    depends_on:
-      - app
     ports:
-      - "80:80"
+      - "3000:3000"
+  # web:
+  #   build: app/.
+  #     # context: config/containers
+  #     # dockerfile: Dockerfile-nginx
+  #   depends_on:
+  #     - app
+  #   ports:
+  #     - "80:80"
